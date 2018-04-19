@@ -1,0 +1,3 @@
+ docker volume create vl_hosting
+ docker run --name vl_mysql -d --restart=on-failure --mount type=volume,source=vl_hosting,destination=/etc/mysql --env MYSQL_DATABASE="db_vliubko" --env MYSQL_ROOT_PASSWORD="unit42" mysql
+docker run --name wpress -d -p 8080:80 --link vl_mysql:mysql wordpress

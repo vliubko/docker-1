@@ -1,0 +1,1 @@
+docker inspect overlord | grep \"IPAddress\": | sed 1d | awk -F \" '{print $4}'

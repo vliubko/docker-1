@@ -1,0 +1,1 @@
+docker service create --name engineering-bay --env OC_USERNAME=kum --env OC_PASSWD=vbocale --network overmind --replicas 2 42school/engineering-bay
